@@ -11,6 +11,7 @@ from rest_framework import status
 def index(request):
     return render(request, 'main/index.html')
 
+
 class Cities_list(APIView):
     def get(self, request):
         serializer = CitySerializer(City.objects.all(), many=True)
@@ -63,7 +64,6 @@ class Shops_list(APIView):
         serializer = ShopSerializer(shops_list, many=True)
         return Response(serializer.data)
 
-
     def post(self, request):
         serializer = ShopSerializer(data=request.data)
         if serializer.is_valid():
@@ -71,4 +71,3 @@ class Shops_list(APIView):
             return Response({"id": new_obj.id})
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-

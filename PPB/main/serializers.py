@@ -1,4 +1,3 @@
-from django import forms
 from .models import Shop, City, Street
 from rest_framework import serializers
 
