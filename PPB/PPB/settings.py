@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'PPB.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'PPB',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '1223',
         'HOST': 'localhost',
@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'main/static',
+
 ]
 
 # Default primary key field type
